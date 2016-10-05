@@ -220,4 +220,8 @@
     <string name="status_bar_battery_text_charging_title">Battery percentage when charging</string>
     <string name="status_bar_battery_text_charging_summary">Always display battery percentage when charging</string>
 
+    <!--SystemUI Tuner -->
+    <string name="statusbar_tuner_title">Statusbar Items</string>
+    <string name="statusbar_tuner_summary">Select which statusbar icons to disable</string>
+
 </resources>
