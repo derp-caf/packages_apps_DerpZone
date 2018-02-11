@@ -12,11 +12,13 @@ import androidx.preference.Preference.OnPreferenceChangeListener;
 import com.android.internal.logging.nano.MetricsProto;
 
 import android.os.Bundle;
+import android.provider.Settings;
 import com.android.settings.R;
 
 import com.android.settings.SettingsPreferenceFragment;
 
-public class GestureSettings extends SettingsPreferenceFragment {
+public class GestureSettings extends SettingsPreferenceFragment implements
+                                Preference.OnPreferenceChangeListener {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

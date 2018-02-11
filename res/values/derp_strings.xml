@@ -286,4 +286,7 @@
     <string name="screen_off_animation_scale">Scale</string>
     <string name="screen_off_animation_title">Screen off animation</string>
 
+    <!-- AOSP Gestures -->
+    <string name="aosp_gesture_title">AOSP Gestures Settings</string>
+
 </resources>
