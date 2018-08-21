@@ -19,11 +19,15 @@ package com.derp.caf.fragments;
 import java.util.ArrayList;
 
 import android.app.AlertDialog;
+
+import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.UserHandle;
+import android.os.Vibrator;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
@@ -38,19 +42,63 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
+import com.android.internal.util.derp.DerpUtils;
+
+import com.derp.caf.preferences.SystemSettingSwitchPreference;
+
+import com.android.internal.util.hwkeys.ActionUtils;
 
 public class NavbarSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+
+    private static final String NAVBAR_VISIBILITY = "navigation_bar_show_new";
+
+    private SwitchPreference mNavbarVisibility;
+
+    private boolean mIsNavSwitchingMode = false;
+    private Handler mHandler;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.derp_settings_navigation);
 
+        mNavbarVisibility = (SwitchPreference) findPreference(NAVBAR_VISIBILITY);
+
+        boolean showing = Settings.System.getInt(getContentResolver(),
+                Settings.System.FORCE_SHOW_NAVBAR,
+                ActionUtils.hasNavbarByDefault(getActivity()) ? 1 : 0) != 0;
+        updateBarVisibleAndUpdatePrefs(showing);
+        mNavbarVisibility.setOnPreferenceChangeListener(this);
+
+        mHandler = new Handler();
     }
+
+
+    private void updateBarVisibleAndUpdatePrefs(boolean showing) {
+        mNavbarVisibility.setChecked(showing);
+    }
+
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference.equals(mNavbarVisibility)) {
+            if (mIsNavSwitchingMode) {
+                return false;
+            }
+            mIsNavSwitchingMode = true;
+            boolean showing = ((Boolean)newValue);
+            Settings.System.putInt(getContentResolver(), Settings.System.FORCE_SHOW_NAVBAR,
+                    showing ? 1 : 0);
+            updateBarVisibleAndUpdatePrefs(showing);
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    mIsNavSwitchingMode = false;
+                }
+            }, 1500);
+            return true;
+        }
         return false;
     }
 
