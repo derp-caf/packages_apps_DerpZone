@@ -27,6 +27,8 @@ import com.android.settings.SettingsPreferenceFragment;
 public class RecentsSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
+    private Preference mChargingLeds;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -35,6 +37,13 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
 
         ContentResolver resolver = getActivity().getContentResolver();
 
+        PreferenceScreen prefScreen = getPreferenceScreen();
+        mChargingLeds = (Preference) findPreference("charging_light");
+        if (mChargingLeds != null
+                && !getResources().getBoolean(
+                        com.android.internal.R.bool.config_intrusiveBatteryLed)) {
+            prefScreen.removePreference(mChargingLeds);
+        }
     }
 
     @Override
