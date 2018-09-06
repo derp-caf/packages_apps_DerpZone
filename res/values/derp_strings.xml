@@ -83,6 +83,7 @@
     <string name="powermenu_users">Users</string>
     <string name="powermenu_logout">Logout</string>
     <string name="global_actions_onthego">OnTheGo</string>
+    <string name="powermenu_torch">Flashlight</string>
 
     <!-- AOSP Gestures -->
     <string name="aosp_gesture_preference">AOSP Gestures</string>
