@@ -13,15 +13,20 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/statusbar_title"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <Preference
-         android:key="network_traffic"
-         android:title="@string/traffic_title"
-         android:summary="@string/traffic_summary"
-         android:fragment="com.derp.caf.fragments.NetworkTraffic" />
+   <!-- Network Traffic Type -->
+    <string-array name="show_network_traffic_type_entries" translatable="false">
+        <item>@string/show_network_traffic_up</item>
+        <item>@string/show_network_traffic_down</item>
+        <item>@string/show_network_traffic_all</item>
+    </string-array>
 
-</PreferenceScreen>
+    <string-array name="show_network_traffic_type_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>0</item>
+    </string-array>
+
+</resources>
+
