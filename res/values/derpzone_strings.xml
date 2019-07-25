@@ -289,6 +289,7 @@
     <string name="lockscreen_clock_selection_dot">DotOS (analog)</string>
     <string name="lockscreen_clock_selection_spectrum">Spectrum (analog)</string>
     <string name="lockscreen_clock_selection_sneeky">Sneeky (analog)</string>
+    <string name="lockscreen_clock_selection_text">Android Q Text Clock</string>
 
     <!-- AOSP Gestures -->
     <string name="aosp_gesture_preference">AOSP Gestures</string>
