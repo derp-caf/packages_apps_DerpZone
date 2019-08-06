@@ -1231,18 +1231,21 @@
     <string name="aggressive_battery_saver_title">Auto-enable on battery saver </string>
     <string name="aggressive_battery_saver_summary">Enable Aggressive Battery automatically when using battery saver</string>
 
-    <!-- Lockscreen text clock align -->
-    <string name="lockscreen_clock_align_title">Q Clock Alignment</string>
-    <string name="lockscreen_clock_align0">Left</string>
-    <string name="lockscreen_clock_align1">Center</string>
-    <string name="lockscreen_clock_align2">Right</string>
+    <!-- Lockscreen cover art filter -->
+    <string name="lockscreen_cover_filter_title">Media cover art filter</string>
+    <string name="lockscreen_cover_filter_none">None</string>
+    <string name="lockscreen_cover_filter_grayscale">Grayscale</string>
+    <string name="lockscreen_cover_filter_blur">Blur</string>
+    <string name="lockscreen_cover_filter_tint">Accent tinted</string>
+    <string name="lockscreen_cover_filter_grayblur">Grayscale and blurred</string>
+    <string name="lockscreen_cover_filter_tinted_blur">Accent Tinted and blurred</string>
 
     <!-- Dumb Dev -->
     <string name="dumb_dev">This options are only meant to work with old recents(Oreo recents). Please remove Quickstep to Enjoy these tweaks.</string>
 
-    <!-- Q To X Clock -->
+    <!-- Q To Derp Clock -->
     <string name="center_text_clock_title">Center Text Clock</string>
-    <string name="center_text_clock_summary">Tranform Q-Clock to X-Clock</string>
+    <string name="center_text_clock_summary">Tranform Q-Clock to Derp-Clock</string>
 
     <string name="left_align_view_title">Left Align Date n Weather</string>
     <string name="left_align_view_summary">Align Weather and Date View to Q-Clock</string>
