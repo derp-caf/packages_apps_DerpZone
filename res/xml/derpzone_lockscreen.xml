@@ -37,6 +37,18 @@
         android:summary="@string/lockscreen_weather_summary"
         android:defaultValue="false" />
 
+    <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
+        android:key="center_text_clock"
+        android:title="@string/center_text_clock_title"
+        android:summary="@string/center_text_clock_summary"
+        android:defaultValue="false" />
+
+    <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
+	android:key="left_align_view"
+        android:title="@string/left_align_view_title"
+        android:summary="@string/left_align_view_summary"
+        android:defaultValue="false" />
+
     <Preference
         android:key="omnijaws_settings"
         android:title="@string/weather_title"
@@ -116,12 +128,12 @@
             android:entryValues="@array/lockscreen_clock_selection_values"
             android:defaultValue="0" />
 
-        <com.derpcaf.derpzone.preferences.SystemSettingListPreference
-        android:key="lockscreen_text_clock_align"
-        android:title="@string/lockscreen_clock_align_title"
-        android:entries="@array/lockscreen_clock_align_entries"
-        android:entryValues="@array/lockscreen_clock_align_values"
-        android:defaultValue="0" />
+	<com.derpcaf.derpzone.preferences.SystemSettingListPreference
+            android:key="lockscreen_date_selection"
+            android:title="@string/lockscreen_date_selection_title"
+            android:entries="@array/lockscreen_date_selection_entries"
+            android:entryValues="@array/lockscreen_date_selection_values"
+            android:defaultValue="0" />
 
     <com.derpcaf.derpzone.preferences.CustomSeekBarPreference
         android:key="lockowner_font_size"
