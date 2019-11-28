@@ -163,4 +163,9 @@
     <string name="lockscreen_clock_sammy">Sammy</string>
     <string name="lockscreen_clock_sammy_bold">Sammy (bold)</string>
 
+    <!-- QS footer text -->
+    <string name="qs_footer_text_show_title">Show QS footer text</string>
+    <string name="qs_footer_text_string_title">Customize footer text</string>
+    <string name="qs_footer_text_string_summary">Set to empty for default Derp-CAF string</string>
+
 </resources>
