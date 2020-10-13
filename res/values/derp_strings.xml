@@ -27,6 +27,9 @@
     <string name="volume_title">Volume rockers</string>
     <string name="notifications_title">Notifications</string>
     <string name="system_title">System Settings</string>
+    <string name="dialer_title">Dialer</string>
+
+    <string name="dialer_summary">Advanced incoming call settings</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>

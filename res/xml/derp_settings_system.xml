@@ -18,4 +18,11 @@
 	android:title="@string/system_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <Preference
+        android:icon="@drawable/ic_phone_classic"
+        android:key="dialer"
+        android:summary="@string/dialer_summary"
+        android:title="@string/dialer_title"
+        android:fragment="com.derp.caf.fragments.DialerSettings" />
+
 </PreferenceScreen>
